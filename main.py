@@ -114,4 +114,4 @@ class TestDeleteBookFromFavorites:
 
 # 9. Тест для get_list_of_favorites_books (возвращает список)
 def test_get_list_of_favorites_books_returns_list(collector):
-    assert isinstance(collector.get_list_of_favorites_books(), list)
+    assert isinstance(collector.get_list_of_favorites_books(), list) 
