@@ -16,9 +16,9 @@ class TestBooksCollector:
 
     # Параметризованный тест для граничных условий: длина имени
     @pytest.mark.parametrize("name, expected", [
-        ("", False),         # пустое имя – не добавится
-        ("a" * 40, True),    # ровно 40 символов – добавится
-        ("a" * 41, False),   # 41 символ – не добавится
+        ("", False),
+        ("a" * 40, True),
+        ("a" * 41, False),
         ("Нормальное имя", True)
     ])
     def test_add_new_book_name_length(self, collector, name, expected):
