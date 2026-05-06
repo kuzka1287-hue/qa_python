@@ -1,1 +1,27 @@
+# Виртуальное окружение
+venv/
+env/
+ENV/
 
+# Кэш pytest и coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Байт-код Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Файлы IDE
+.idea/
+.vscode/
+*.iml
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Системные файлы (macOS, Windows)
+.DS_Store
+Thumbs.db
