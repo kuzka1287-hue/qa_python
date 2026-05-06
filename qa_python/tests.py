@@ -60,10 +60,7 @@ class TestBooksCollector:
         collector.add_new_book("Книга2")
         collector.set_book_genre("Книга1", "Ужасы")
         collector.set_book_genre("Книга2", "Комедии")
-
-        # Проверка для существующего жанра
         assert collector.get_books_with_specific_genre("Ужасы") == ["Книга1"]
-        # Проверка для несуществующего жанра
         assert collector.get_books_with_specific_genre("Фэнтези") == []
 
     # Тест get_books_genre (покрытие метода)
@@ -77,8 +74,8 @@ class TestBooksCollector:
     def test_get_books_for_children(self, collector):
         collector.add_new_book("Ужастик")
         collector.add_new_book("Мульт")
-        collector.set_book_genre("Ужастик", "Ужасы")    # возрастной рейтинг
-        collector.set_book_genre("Мульт", "Мультфильмы") # без рейтинга
+        collector.set_book_genre("Ужастик", "Ужасы")
+        collector.set_book_genre("Мульт", "Мультфильмы")
         assert collector.get_books_for_children() == ["Мульт"]
 
     # Тест add_book_in_favorites: успешное добавление
@@ -106,7 +103,7 @@ class TestBooksCollector:
         collector.delete_book_from_favorites("Книга")
         assert "Книга" not in collector.get_list_of_favorites_books()
 
-    # Тест удаления книги, которой нет в избранном (без ошибок)
+    # Тест удаления книги, которой нет в избранном
     def test_delete_book_not_in_favorites(self, collector):
         collector.delete_book_from_favorites("Нет в избранном")
         assert collector.get_list_of_favorites_books() == []
