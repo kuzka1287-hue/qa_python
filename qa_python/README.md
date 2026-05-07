@@ -1,3 +1,4 @@
+# qa_python
 # Тесты для BooksCollector
 
 В этом проекте реализован набор автотестов для класса `BooksCollector` с использованием библиотеки `pytest`.  
@@ -40,3 +41,6 @@
 
 ### 9. `get_list_of_favorites_books` – получение списка избранного
 - `test_get_list_of_favorites_books_returns_list` – метод всегда возвращает список (даже пустой).
+
+## Запуск тестов
+
